@@ -36,13 +36,13 @@ public class StatisticsService {
     }
 
 //Среднюю сумму продаж в месяц
-    public static long averageAmounted(long[] purchases){
+    public long averageAmounted(long[] purchases){
         long result = 0;
         for (long d: purchases){
             result +=d;
         }
 
-        return result/purchases.length;
+        return result/30;
     }
 //Кол-во месяцев, в которых продажи были ниже среднего (см. п.2)
     public int lastElement(long[] purchases){
